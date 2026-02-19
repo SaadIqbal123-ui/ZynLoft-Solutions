@@ -1,0 +1,142 @@
+{
+  "design_system": {
+    "typography": {
+      "font_family": {
+        "heading": "Outfit, sans-serif",
+        "body": "Plus Jakarta Sans, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "scale": {
+        "h1": "text-5xl md:text-7xl font-bold tracking-tight",
+        "h2": "text-4xl md:text-5xl font-semibold tracking-tight",
+        "h3": "text-2xl md:text-3xl font-medium",
+        "body": "text-base md:text-lg leading-relaxed",
+        "caption": "text-sm font-medium tracking-wide uppercase text-muted-foreground"
+      }
+    },
+    "colors": {
+      "palette": {
+        "primary": {
+          "DEFAULT": "#1e293b",
+          "foreground": "#ffffff",
+          "hover": "#0f172a"
+        },
+        "secondary": {
+          "DEFAULT": "#3b82f6",
+          "foreground": "#ffffff",
+          "hover": "#2563eb"
+        },
+        "accent": {
+          "DEFAULT": "#0ea5e9",
+          "foreground": "#ffffff"
+        },
+        "background": {
+          "DEFAULT": "#f8fafc",
+          "dark": "#020617",
+          "sidebar": "#1e293b"
+        },
+        "surface": {
+          "DEFAULT": "#ffffff",
+          "dark": "#0f172a"
+        },
+        "muted": {
+          "DEFAULT": "#f1f5f9",
+          "foreground": "#64748b"
+        }
+      },
+      "gradients": {
+        "hero": "bg-gradient-to-br from-slate-900 via-[#1e293b] to-slate-800",
+        "sidebar": "bg-[#1e293b]",
+        "glow": "bg-blue-500/20 blur-3xl"
+      }
+    },
+    "spacing": {
+      "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "section_padding": "py-16 md:py-24",
+      "element_gap": "gap-6 md:gap-8"
+    },
+    "visual_enhancers": {
+      "radius": "rounded-xl",
+      "shadows": {
+        "card": "shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300",
+        "sidebar": "shadow-xl"
+      },
+      "borders": "border border-slate-200 dark:border-slate-800",
+      "glass": "backdrop-blur-md bg-white/70 border-white/20"
+    }
+  },
+  "layout_strategy": {
+    "structure": "hybrid_sidebar",
+    "sidebar": {
+      "position": "fixed left-0 top-0 h-full",
+      "width": "w-64",
+      "mobile_behavior": "drawer_overlay",
+      "theme": "dark",
+      "content_offset": "md:ml-64"
+    },
+    "grid_system": "bento_grid_asymmetric"
+  },
+  "components": {
+    "sidebar_nav": {
+      "path": "/app/frontend/src/components/layout/Sidebar.js",
+      "specs": "Vertical navigation, logo at top, user profile/logout at bottom. Active state: bg-white/10 text-white. Inactive: text-slate-400 hover:text-white hover:bg-white/5."
+    },
+    "hero_section": {
+      "path": "/app/frontend/src/components/sections/Hero.js",
+      "specs": "Split layout. Left: Text (H1, Subtext, CTA). Right: Abstract 3D/Geometric Image. Background: Clean light with subtle mesh gradient."
+    },
+    "services_grid": {
+      "path": "/app/frontend/src/components/sections/Services.js",
+      "specs": "Bento grid layout. Cards with icons, title, description. Hover effect: Scale up slightly, border color change."
+    },
+    "contact_form": {
+      "path": "/app/frontend/src/components/sections/Contact.js",
+      "specs": "Two column. Left: Contact Info (Phone, Email, Address). Right: Form. Fields: Name, Email, Phone, Project Name, Description, File Upload (Drag & Drop, max 4 files)."
+    },
+    "auth_modal": {
+      "path": "/app/frontend/src/components/auth/AuthModal.js",
+      "specs": "Shadcn Dialog. Tabs for Login/Register. Fields: Email, Password. Validation: Zod schema."
+    },
+    "file_upload": {
+      "path": "/app/frontend/src/components/ui/FileUpload.js",
+      "specs": "Custom dropzone. Dashed border. State: Idle, DragOver, FileSelected. List selected files with 'remove' (x) button."
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_abstract": {
+        "url": "https://images.unsplash.com/photo-1762951566390-e35eb7dfe9c5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBibHVlJTIwZ2VvbWV0cmljJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzE0MTM1MzV8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Abstract geometric technology background",
+        "category": "hero"
+      },
+      "team_collaboration": {
+        "url": "https://images.unsplash.com/photo-1677078610152-8a627d8ced8d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzb2Z0d2FyZSUyMG9mZmljZSUyMHRlYW0lMjBjb2xsYWJvcmF0aW9ufGVufDB8fHx8MTc3MTQxMzUzMXww&ixlib=rb-4.1.0&q=85",
+        "alt": "Team collaborating in modern office",
+        "category": "about"
+      },
+      "coding_closeup": {
+        "url": "https://images.unsplash.com/photo-1610702876884-0f8473590287?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBzb2Z0d2FyZSUyMG9mZmljZSUyMHRlYW0lMjBjb2xsYWJvcmF0aW9ufGVufDB8fHx8MTc3MTQxMzUzMXww&ixlib=rb-4.1.0&q=85",
+        "alt": "Developer working on code",
+        "category": "services"
+      }
+    },
+    "icons": "lucide-react"
+  },
+  "instructions_to_main_agent": [
+    "1. Install dependencies: `npm install lucide-react clsx tailwind-merge framer-motion react-hook-form @hookform/resolvers zod`.",
+    "2. Configure Tailwind: Add 'Outfit' and 'Plus Jakarta Sans' to font family. Add custom colors.",
+    "3. Create the Layout first: Sidebar (Fixed Left) + Main Content Wrapper.",
+    "4. Implement the 'AuthModal' using a Dialog component. It should be accessible from the Sidebar 'Login' button.",
+    "5. Build the 'ContactForm' with a custom File Upload UI. Do not use a raw input type='file'. Create a visual dropzone.",
+    "6. Ensure the Sidebar is responsive. On mobile, it should be a drawer/sheet triggered by a hamburger menu.",
+    "7. Use the provided image URLs for the respective sections.",
+    "8. Apply 'data-testid' to all interactive elements (buttons, inputs, links)."
+  ],
+  "universal_guidelines": [
+    "Avoid generic 'AI slop' designs. Use asymmetric grids and generous spacing.",
+    "Dark colors should be rich (tinted with blue), not pure black.",
+    "Micro-interactions are mandatory (hover states, focus rings).",
+    "Use 'sonner' for toast notifications.",
+    "Do not use 'Inter' for headings. Use 'Outfit'."
+  ]
+}
